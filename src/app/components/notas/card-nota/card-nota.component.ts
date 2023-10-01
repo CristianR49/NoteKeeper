@@ -9,14 +9,7 @@ import { Nota } from '../../../components/notas/nota';
 export class CardNotaComponent {
   @Input() nota: Nota;
 
-  @Output() onArquivarClicado: EventEmitter<Nota>;
-
   constructor() {
     this.nota = new Nota('', '', 'dark', 0);
-    this.onArquivarClicado = new EventEmitter();
-  }
-
-  arquivarNota(nota: Nota) {
-    this.onArquivarClicado.emit(nota);
   }
 }
